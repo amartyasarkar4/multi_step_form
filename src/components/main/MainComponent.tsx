@@ -4,7 +4,7 @@ import FormHandler from "./FormHandler";
 
 import { TypesOfStages } from "@/lib/loadtypes";
 import FinalTouch from "./FinalTouch";
-import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
+import { ActiveStageContext, ActiveStageContextType } from "../contextProvider";
 
 const MainComponent = () => {
   const activeStageContext = useContext(ActiveStageContext);

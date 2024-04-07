@@ -4,7 +4,10 @@ import { ComfortLevelType, TypesOfStages } from "@/lib/loadtypes";
 import Image from "next/image";
 import React, { useContext, useState } from "react";
 import classes from "./forms.module.css";
-import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
+import {
+  ActiveStageContext,
+  ActiveStageContextType,
+} from "@/components/contextProvider";
 
 const Comfort_level = () => {
   const activeStageContext = useContext(ActiveStageContext);

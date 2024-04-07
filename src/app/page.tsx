@@ -1,17 +1,12 @@
 "use client";
+import {
+  ActiveStageContext,
+  ActiveStageContextType,
+} from "@/components/contextProvider";
 import MainComponent from "@/components/main/MainComponent";
 import { TypesOfStages } from "@/lib/loadtypes";
 import Image from "next/image";
 import React, { createContext, useState } from "react";
-
-export type ActiveStageContextType = {
-  activeStage: TypesOfStages;
-  setActiveStage: (update: TypesOfStages) => void;
-};
-
-export const ActiveStageContext = createContext<
-  ActiveStageContextType | undefined
->(undefined);
 
 export default function Home() {
   const [activeStage, setActiveStage] = useState<TypesOfStages>(

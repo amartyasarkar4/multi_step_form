@@ -4,7 +4,10 @@ import React, { useContext, useState } from "react";
 import classes from "./forms.module.css";
 import { DescribeType, TypesOfStages } from "@/lib/loadtypes";
 import { loadMostInterestedData } from "@/api/loadData";
-import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
+import {
+  ActiveStageContext,
+  ActiveStageContextType,
+} from "@/components/contextProvider";
 
 const MostInterested = () => {
   const activeStageContext = useContext(ActiveStageContext);

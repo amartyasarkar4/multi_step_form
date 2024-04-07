@@ -1,8 +1,12 @@
 "use client";
 import MainComponent from "@/components/main/MainComponent";
 import React, { useState } from "react";
-import { ActiveStageContext, ActiveStageContextType } from "../page";
+
 import { TypesOfStages } from "@/lib/loadtypes";
+import {
+  ActiveStageContext,
+  ActiveStageContextType,
+} from "@/components/contextProvider";
 
 const DisscussionPage = () => {
   const [activeStage, setActiveStage] = useState<TypesOfStages>(

@@ -7,7 +7,7 @@ import MostInterested from "./Forms/MostInterested";
 import RightPlace from "./Forms/RightPlace";
 import Comfort_level from "./Forms/Comfort_level";
 import OnTheWay from "./Forms/OnTheWay";
-import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
+import { ActiveStageContext, ActiveStageContextType } from "../contextProvider";
 
 const FormHandler = () => {
   const activeStageContext = useContext(ActiveStageContext);

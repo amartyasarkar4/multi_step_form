@@ -4,7 +4,8 @@ import { TypesOfStages } from "@/lib/loadtypes";
 import React, { useContext, useState } from "react";
 
 import classes from "./bar.module.css";
-import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
+import { ActiveStageContext, ActiveStageContextType } from "../contextProvider";
+
 const ProgressBar = () => {
   const activeStageContext = useContext(ActiveStageContext);
 
