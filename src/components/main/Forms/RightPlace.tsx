@@ -1,7 +1,4 @@
-import {
-  ActiveStageContext,
-  ActiveStageContextType,
-} from "@/app/disscussion/layout";
+import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
 import { TypesOfStages } from "@/lib/loadtypes";
 import Image from "next/image";
 import React, { useContext } from "react";

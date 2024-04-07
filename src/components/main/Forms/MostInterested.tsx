@@ -1,13 +1,10 @@
-import {
-  ActiveStageContext,
-  ActiveStageContextType,
-} from "@/app/disscussion/layout";
 import Image from "next/image";
 import React, { useContext, useState } from "react";
 
 import classes from "./forms.module.css";
 import { DescribeType, TypesOfStages } from "@/lib/loadtypes";
 import { loadMostInterestedData } from "@/api/loadData";
+import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
 
 const MostInterested = () => {
   const activeStageContext = useContext(ActiveStageContext);

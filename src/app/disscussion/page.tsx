@@ -1,20 +1,25 @@
 "use client";
 import MainComponent from "@/components/main/MainComponent";
-import React, { useContext } from "react";
-import { ActiveStageContext, ActiveStageContextType } from "./layout";
+import React, { useState } from "react";
+import { ActiveStageContext, ActiveStageContextType } from "../page";
 import { TypesOfStages } from "@/lib/loadtypes";
 
 const DisscussionPage = () => {
-  const activeStageContext = useContext(ActiveStageContext);
+  const [activeStage, setActiveStage] = useState<TypesOfStages>(
+    TypesOfStages.DESCRIBE_BEST
+  );
 
-  let { activeStage, setActiveStage } =
-    activeStageContext as ActiveStageContextType;
+  const contextValue: ActiveStageContextType = {
+    activeStage,
+    setActiveStage,
+  };
   return (
-    <div>
-      <MainComponent />
+    <ActiveStageContext.Provider value={contextValue}>
+      <div>
+        <MainComponent />
 
-      {/* <h1>Current Stage: {activeStage}</h1> */}
-      {/* <button onClick={() => setActiveStage(TypesOfStages.MOST_INTERESTED)}>
+        {/* <h1>Current Stage: {activeStage}</h1> */}
+        {/* <button onClick={() => setActiveStage(TypesOfStages.MOST_INTERESTED)}>
         Change Stage
       </button>
       <button onClick={() => setActiveStage(TypesOfStages.RIGHT_PLACE)}>
@@ -23,7 +28,8 @@ const DisscussionPage = () => {
       <button onClick={() => setActiveStage(TypesOfStages.COMFORT_LEVEL)}>
         Change Stage 3
       </button> */}
-    </div>
+      </div>
+    </ActiveStageContext.Provider>
   );
 };
 

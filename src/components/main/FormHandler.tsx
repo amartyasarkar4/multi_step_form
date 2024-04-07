@@ -1,8 +1,5 @@
 import { loadSatges } from "@/api/loadData";
-import {
-  ActiveStageContext,
-  ActiveStageContextType,
-} from "@/app/disscussion/layout";
+
 import { TypesOfStages } from "@/lib/loadtypes";
 import React, { useContext, useState } from "react";
 import DescribeBest from "./Forms/DescribeBest";
@@ -10,6 +7,7 @@ import MostInterested from "./Forms/MostInterested";
 import RightPlace from "./Forms/RightPlace";
 import Comfort_level from "./Forms/Comfort_level";
 import OnTheWay from "./Forms/OnTheWay";
+import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
 
 const FormHandler = () => {
   const activeStageContext = useContext(ActiveStageContext);

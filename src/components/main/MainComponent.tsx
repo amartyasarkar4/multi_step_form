@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 import ProgressBar from "../progeressBar/Bar";
 import FormHandler from "./FormHandler";
-import {
-  ActiveStageContext,
-  ActiveStageContextType,
-} from "@/app/disscussion/layout";
+
 import { TypesOfStages } from "@/lib/loadtypes";
 import FinalTouch from "./FinalTouch";
+import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
 
 const MainComponent = () => {
   const activeStageContext = useContext(ActiveStageContext);

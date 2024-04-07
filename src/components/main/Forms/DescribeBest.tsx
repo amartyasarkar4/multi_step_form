@@ -1,13 +1,11 @@
 import { loadDescribeBestData } from "@/api/loadData";
-import {
-  ActiveStageContext,
-  ActiveStageContextType,
-} from "@/app/disscussion/layout";
+
 import { DescribeType, TypesOfStages } from "@/lib/loadtypes";
 import Image from "next/image";
 import React, { useContext, useState } from "react";
 
 import classes from "./forms.module.css";
+import { ActiveStageContext, ActiveStageContextType } from "@/app/page";
 
 const DescribeBest = () => {
   const activeStageContext = useContext(ActiveStageContext);
