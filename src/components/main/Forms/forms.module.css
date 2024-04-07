@@ -1,0 +1,70 @@
+.done {
+  border-color: #24b253;
+
+  position: relative;
+  background-color: rgb(222, 251, 251);
+}
+
+.donePath {
+  border-color: #2b8de3;
+
+  position: relative;
+  background-color: rgba(228, 205, 226, 0.129);
+}
+
+.donePath::before {
+  content: "";
+  position: absolute;
+  border-color: #0e8eea;
+  border-style: solid;
+  border-width: 0.4em;
+  border-radius: 50%;
+
+  height: 0.8em;
+  top: 1.3em;
+  left: 0.6em;
+  margin: auto;
+  transform: rotate(0deg);
+  width: 0.8em;
+}
+
+.doneComfort {
+  border-color: #ef915f;
+
+  position: relative;
+}
+
+.done ::before,
+.doneComfort ::before {
+  content: "";
+  position: absolute;
+  border-color: #0eb746;
+  border-style: solid;
+  border-width: 0 0.3em 0.23em 0;
+  height: 1.2em;
+  top: 1.3em;
+  left: 0.6em;
+  margin: auto;
+  transform: rotate(45deg);
+  width: 0.6em;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 50%;
+  /* Use linear-gradient for border */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  /* Gradient border colors */
+  background-image: linear-gradient(to right, #ff8a00, #d4d2d3, #00ff15);
+  animation: rotationAMar 0.9s linear infinite;
+}
+
+@keyframes rotationAMar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
